@@ -6,4 +6,5 @@ venv/
 data/raw
 data/processed
 data/vocabulary
+data/encoded
 data/__pycache__/
