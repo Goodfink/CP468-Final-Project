@@ -27,7 +27,7 @@ def is_valid(example: dict) -> bool:
     source_length = len(example["source_text"].split())
     target_length = len(example["target_text"].split())
 
-    return source_length > MIN_ARTICLE_WORDS and target_length > MIN_SUMMARY_WORDS
+    return source_length >= MIN_ARTICLE_WORDS and target_length >= MIN_SUMMARY_WORDS
 
 def build_split(dataset_split: Dataset, split_name: str) -> Dataset:
     processed_split = dataset_split.map(
@@ -35,7 +35,7 @@ def build_split(dataset_split: Dataset, split_name: str) -> Dataset:
         desc = f"cleaning {split_name}"
     )
 
-    precessed_split = processed_split.filter(
+    processed_split = processed_split.filter(
         is_valid,
         desc = f"filtering {split_name}"
     )

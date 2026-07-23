@@ -3,7 +3,8 @@ from datasets import load_dataset
 
 DATASET_NAME = ("bltlab/lr-sum")
 LANGUAGE_CONFIG = "eng"
-OUTPUT_DIRECTORY = Path("raw/lr_sum_eng")
+DATA_DIRECTORY = Path(__file__).resolve().parent
+OUTPUT_DIRECTORY = DATA_DIRECTORY / "raw" / "lr_sum_eng"
 
 def main() -> None:
     OUTPUT_DIRECTORY.parent.mkdir(parents=True, exist_ok=True)
