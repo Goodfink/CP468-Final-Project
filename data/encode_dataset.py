@@ -3,7 +3,7 @@ from pathlib import Path
 
 from datasets import load_from_disk, DatasetDict
 
-from data.tokenizer import tokenize
+from tokenizer import tokenize
 
 DATA_DIRECTORY = Path(__file__).resolve().parent
 PROCESSED_DATASET_PATH = Path(DATA_DIRECTORY / "processed" / "lr_sum_eng")
