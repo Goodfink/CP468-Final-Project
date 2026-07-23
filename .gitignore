@@ -2,5 +2,8 @@
 venv
 venv/
 
+
 data/raw
 data/processed
+data/vocabulary
+data/__pycache__/
